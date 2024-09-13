@@ -10,12 +10,13 @@
     <div
       class="w-full h-screen bg-zinc-900 text-white flex flex-col items-center"
     >
-      <h1 class="m-10 text-4xl">Create the User:</h1>
+      <h1 class="m-10 text-4xl">Create Account:</h1>
       <form action="/create" method="post" class="flex flex-col gap-10">
         <input
           type="text"
           placeholder="Enter the Username"
           name="username"
+          value=""
           class="p-4 w-96 h-10 outline-none rounded-md bg-zinc-700"
         />
         <input
@@ -28,6 +29,7 @@
           type="password"
           placeholder="Enter the password"
           name="password"
+          value=" "
           class="p-4 w-96 h-10 outline-none rounded-md bg-zinc-700"
         />
         <input
@@ -42,10 +44,14 @@
           name="email"
           class="p-4 w-96 h-10 outline-none rounded-md bg-zinc-700"
         />
+        <!-- <div class="flex gap-2"> -->
+        <!-- <label for="profilepic">Post Your Profile Picture here:</label> -->
+        <!-- <input type="file" name="image" /> -->
+        <!-- </div> -->
         <input
           type="submit"
           class="border-2 bg-blue-500 outline-none rounded-md w-32 p-2"
-          value="Create User"
+          value="Sign Up"
         />
       </form>
     </div>

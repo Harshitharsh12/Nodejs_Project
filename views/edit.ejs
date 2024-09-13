@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+
+  <body class="bg-zinc-900">
+    <div class="flex justify-end">
+      <form action="/logout">
+        <input
+          type="submit"
+          value="Logout"
+          class="bg-red-600 text-white rounded-sm border-red px-2 py-1 m-4 mb-2"
+        />
+      </form>
+    </div>
+    <div class="flex flex-col items-center text-zinc-200">
+      <h1 class="mb-2 text-4xl">You can Edit your post here:</h1>
+      <form
+        action="/update/<%=post.id%>"
+        method="post"
+        class="flex flex-col gap-2 align-center"
+      >
+        <textarea
+          name="content"
+          placeholder="What's on your mind?"
+          id=""
+          class="resize-none w-96 h-20 placeholder-white text-blue-800 mt-10 bg-zinc-400 p-2 rounded-md outline-none"
+          outline="none"
+        >
+<%=post.content%></textarea
+        >
+        <input
+          type="text"
+          placeholder="Enter the new Url of the Picture:"
+          class="rounded-md bg-zinc-400 placeholder-white p-2 text-blue-600 outline-none"
+          name="url"
+          value="<%=post.img%>"
+        />
+        <input
+          type="submit"
+          class="bg-yellow-500 p-2 rounded-md text-white text-xl w-40 ml-28"
+          value="Update Post"
+        />
+      </form>
+    </div>
+  </body>
+</html>

@@ -12,5 +12,9 @@ const userSchema = mongoose.Schema({
       ref: "post",
     },
   ],
+  profilepic: {
+    type: String,
+    default: "default.png",
+  },
 });
 module.exports = mongoose.model("user", userSchema);
